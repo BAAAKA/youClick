@@ -14,9 +14,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-// Hallo Roy
-// Hallo Roy Aregger
-// Test
+//Pull, Commit, Push
 
 public class Clickergame extends JFrame implements ActionListener{
 
