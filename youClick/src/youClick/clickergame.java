@@ -16,7 +16,7 @@ import javax.swing.JProgressBar;
 
 //Pull, Commit, Push
 
-public class Clickergame extends JFrame implements ActionListener{
+public class clickergame extends JFrame implements ActionListener{
 
 	private JProgressBar Bar;
 	private JButton ThisButton = new JButton("Fight Me");
@@ -51,7 +51,7 @@ public class Clickergame extends JFrame implements ActionListener{
 		
 	}
 	
-	public Clickergame(){
+	public clickergame(){
 		setLayout(new BorderLayout());
 		
 		Bar = new JProgressBar(0, anzahlschritte);

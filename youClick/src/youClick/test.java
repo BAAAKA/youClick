@@ -6,7 +6,7 @@ public class test {
 		
 		enemies enemy=new e_ritter(100, "Ritter", "ritter", -100, 100, 0, 50);
 
-		Clickergame PBD=new Clickergame();
+		clickergame PBD=new clickergame();
 		PBD.createEnemy(enemy);
 		
 
