@@ -1,5 +1,5 @@
 # youClick
 
-Some school project made by BAAAKA (vmuser) and eNPilz
+Some school project made by BAAAKA and eNPilz
 
 yea thats about it
