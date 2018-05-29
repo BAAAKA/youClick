@@ -16,6 +16,7 @@ import javax.swing.JProgressBar;
 
 // Hallo Roy
 // Hallo Roy Aregger
+// Test
 
 public class Clickergame extends JFrame implements ActionListener{
 
