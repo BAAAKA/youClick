@@ -160,7 +160,7 @@ public class clickergame extends JFrame implements ActionListener{
 	public void setStats() { //Updatedate von allen stats welche auf dem GUI angezeigt werden
 		LabelTime.setText("Time passed: " + gl.time() + " Seconds");
 		LabelEnemysdefeated.setText("Enemys defeated: " + Integer.toString(Enemysdefeated));
-		LabelKPM.setText("KPM: " + anzKlicks/(Integer.parseInt(gl.time())+ 0.1)); // +0.1 Da man nicht durch "0" rechnen darf
+		LabelKPM.setText("KPM: " + (anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60); // +0.1 Da man nicht durch "0" rechnen darf
 	}
 	
 //	public String time() {
@@ -173,7 +173,7 @@ public class clickergame extends JFrame implements ActionListener{
 
 	public void attackButton(){ 
 		anzKlicks++;
-		if(enemy.getHP()>1){ //Falls der Gegner noch HP übrig hat...
+		if(enemy.getHP()>1){ //Falls der Gegner noch HP Ã¼brig hat...
 			System.out.println(gl.getDmgDone(enemy));
 			progress=enemy.getHP();
 			
@@ -184,7 +184,7 @@ public class clickergame extends JFrame implements ActionListener{
 			setStats();
 
 			}
-			else { //Falls der Gegner kein HP mehr übrig hat
+			else { //Falls der Gegner kein HP mehr Ã¼brig hat
 				enemy=gl.createenemy(); //Neuer Gegner erstellen
 				Enemysdefeated++;
 				Bar.setString(gl.barvalue());
