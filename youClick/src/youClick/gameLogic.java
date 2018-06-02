@@ -30,11 +30,18 @@ public class gameLogic {
 	// !IMPORTANT VOR DEM NUTZEN DIE PFÄDE ZU DEN BILDERN ANPASSEN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !IMPORTANT VOR DEM NUTZEN DIE PFÄDE ZU DEN BILDERN ANPASSEN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	// !IMPORTANT VOR DEM NUTZEN DIE PFÄDE ZU DEN BILDERN ANPASSEN !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-	private String pathtolehrer="U:/git/youClick/youClick/src/youClick/images/lehrer.jpg";
+	//Roy
+	/*private String pathtolehrer="U:/git/youClick/youClick/src/youClick/images/lehrer.jpg";
 	private String pathtodrache="U:/git/youClick/youClick/src/youClick/images/drache.jpg";
-	private String pathtobakterie="U:/git/youClick/youClick/src/youClick/images/Bakterium.jpg";
+	private String pathtobakterie="C:\Users\MK\git\youClick\youClick\src\youClick\images\Bakterium.jpg";
 	private String pathtoritter="U:/git/youClick/youClick/src/youClick/images/ritter.gif";
+	*/
+	
+	//Mischa
+	private String pathtolehrer="C:/Users/MK/git/youClick/youClick/src/youClick/images/lehrer.jpg";
+	private String pathtodrache="C:/Users/MK/git/youClick/youClick/src/youClick/images/drache.jpg";
+	private String pathtobakterie="C:/Users/MK/git/youClick/youClick/src/youClick/images/Bakterium.jpg";
+	private String pathtoritter="C:/Users/MK/git/youClick/youClick/src/youClick/images/ritter.jpg";
 
 	
 	private ImageIcon imagedrachen = new ImageIcon(pathtodrache);

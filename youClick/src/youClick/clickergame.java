@@ -133,10 +133,8 @@ public class clickergame extends JFrame implements ActionListener{
 		
 		//^ Aufbau Frame
 		
-		
-		
 		setLocation(800, 300);
-		setTitle("ClickerClickClick");  
+		setTitle("youClick");  
 		setSize(800,800);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
