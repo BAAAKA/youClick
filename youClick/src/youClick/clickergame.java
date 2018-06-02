@@ -34,10 +34,27 @@ public class clickergame extends JFrame implements ActionListener{
 	//stats
 	private int Enemysdefeated=0;
 	
-	private JButton w_schinkenButton=new JButton("Schinken");
-	private JButton w_bleistiftButton=new JButton("Bleistift");
-	private JButton w_bombeButton=new JButton("Bombe");
-	private JButton w_schwertButton=new JButton("Schwert");
+	//Defensive tools
+	
+	//Ham button
+	private String pathtoHam="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/ham.png";
+	private ImageIcon imageHam= new ImageIcon(pathtoHam);
+	private JButton w_schinkenButton=new JButton(imageHam);
+	
+	//Pencil button
+	private String pathtoPencil="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/pencil.png";
+	private ImageIcon imagePencil= new ImageIcon(pathtoPencil);
+	private JButton w_bleistiftButton=new JButton(imagePencil);
+	
+	//Bomb button
+	private String pathtoBomb="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/bomb.png";
+	private ImageIcon imageBomb= new ImageIcon(pathtoBomb);
+	private JButton w_bombeButton=new JButton(imageBomb);
+	
+	//Sword button
+	private String pathtoSword="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/sword.png";
+	private ImageIcon imageSword= new ImageIcon(pathtoSword);
+	private JButton w_schwertButton=new JButton(imageSword);
 	
 
 
@@ -135,7 +152,7 @@ public class clickergame extends JFrame implements ActionListener{
 		
 		setLocation(800, 300);
 		setTitle("youClick");  
-		setSize(800,800);
+		setSize(940,800);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
