@@ -52,7 +52,7 @@ public class clickergame extends JFrame implements ActionListener{
 	private JButton w_bombeButton=new JButton(imageBomb);
 	
 	//Sword button
-	private String pathtoSword="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/sword.png";
+	private String pathtoSword="/images/defensive_tools/sword.png";
 	private ImageIcon imageSword= new ImageIcon(pathtoSword);
 	private JButton w_schwertButton=new JButton(imageSword);
 	
