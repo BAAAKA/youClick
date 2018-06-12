@@ -1,10 +1,23 @@
 package youClick;
 
-public class w_schinken extends weapons {
+public class w_schinken implements Waffenverhalten{
 		
-	public w_schinken() {
-		super("Schinken", 10);
-		// TODO Auto-generated constructor stub
+	@Override
+	public int useweapon(enemies enemy) {
+		String enemyrace=enemy.getRace();
+		if(enemyrace=="ritter"){
+			return 20;
+		}
+		else if(enemyrace=="lehrer"){
+			return 0;
+		}
+		else if(enemyrace=="drache"){
+			return 10;
+		}		
+		else if(enemyrace=="bakterie"){
+			return 5;
+		}
+		return 0;
 	}
 
 }

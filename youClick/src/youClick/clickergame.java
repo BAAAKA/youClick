@@ -28,31 +28,35 @@ public class clickergame extends JFrame implements ActionListener{
 	private JButton ThisButton = new JButton();
 	private int progress = 100;
 	private int anzahlschritte=100;
-	private int dmg=10;
 	private int anzKlicks=0;
 	
 	//stats
 	private int Enemysdefeated=0;
 	
 	//Defensive tools
+	private Waffenverhalten w_schinken=new w_schinken();
+	private Waffenverhalten w_bombe=new w_bombe();
+	private Waffenverhalten w_bleistift=new w_bleistift();
+	private Waffenverhalten w_schwert=new w_schwert();
+	
 	
 	//Ham button
-	private String pathtoHam="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/ham.png";
+	private String pathtoHam="src/youClick/images/defensive_tools/ham.png";
 	private ImageIcon imageHam= new ImageIcon(pathtoHam);
 	private JButton w_schinkenButton=new JButton(imageHam);
 	
 	//Pencil button
-	private String pathtoPencil="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/pencil.png";
+	private String pathtoPencil="src/youClick/images/defensive_tools/pencil.png";
 	private ImageIcon imagePencil= new ImageIcon(pathtoPencil);
 	private JButton w_bleistiftButton=new JButton(imagePencil);
 	
 	//Bomb button
-	private String pathtoBomb="C:/Users/MK/git/youClick/youClick/src/youClick/images/defensive_tools/bomb.png";
+	private String pathtoBomb="src/youClick/images/defensive_tools/bomb.png";
 	private ImageIcon imageBomb= new ImageIcon(pathtoBomb);
 	private JButton w_bombeButton=new JButton(imageBomb);
 	
 	//Sword button
-	private String pathtoSword="/images/defensive_tools/sword.png";
+	private String pathtoSword="src/youClick/images/defensive_tools/sword.png";
 	private ImageIcon imageSword= new ImageIcon(pathtoSword);
 	private JButton w_schwertButton=new JButton(imageSword);
 	
@@ -216,16 +220,16 @@ public class clickergame extends JFrame implements ActionListener{
 			attackButton();			
 		}
 		if(e.getSource() == this.w_schinkenButton){ //Wechseln der Waffe auf den Schinken
-			gl.setWeaponUsing(1);
+			gl.setWeaponUsing(w_schinken);
 		}
 		if(e.getSource() == this.w_bleistiftButton){ //Wechseln der Waffe auf den Bleistift
-			gl.setWeaponUsing(2);
+			gl.setWeaponUsing(w_bleistift);
 		}
 		if(e.getSource() == this.w_bombeButton){ //Wechseln der Waffe auf die Bombe
-			gl.setWeaponUsing(3);
+			gl.setWeaponUsing(w_bombe);
 		}
 		if(e.getSource() == this.w_schwertButton){ //Wechseln der Waffe auf das Schwert
-			gl.setWeaponUsing(4);
+			gl.setWeaponUsing(w_schwert);
 		}
 	}
 }

@@ -1,5 +1,7 @@
 package youClick;
 
+import javax.swing.ImageIcon;
+
 public class enemies {
 	
 	private int HP;
@@ -9,8 +11,9 @@ public class enemies {
 	private int resistanceToBleistift;
 	private int resistanceToBombe;
 	private int resistanceToSchwert;
+	private ImageIcon icon;
 
-	public enemies(int HP, String name, String race, int resistanceToSchinken, int resistanceToBleistift, int resistanceToSchwert, int resistanceToBombe){
+	public enemies(int HP, String name, String race, int resistanceToSchinken, int resistanceToBleistift, int resistanceToSchwert, int resistanceToBombe,ImageIcon icon){
 		this.HP=HP;
 		this.name=name;
 		this.race=race;
@@ -18,6 +21,7 @@ public class enemies {
 		this.resistanceToBleistift=resistanceToBleistift;
 		this.resistanceToSchwert=resistanceToSchwert;
 		this.resistanceToBombe=resistanceToBombe;
+		this.icon=icon;
 
 	}
 
@@ -77,6 +81,14 @@ public class enemies {
 
 	public void setRace(String race) {
 		this.race = race;
+	}
+
+	public ImageIcon getIcon() {
+		return icon;
+	}
+
+	public void setIcon(ImageIcon icon) {
+		this.icon = icon;
 	}
 
 

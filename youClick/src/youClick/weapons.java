@@ -1,12 +1,10 @@
 package youClick;
 
 public class weapons {
-	private String name;
 	private int dmg;
 
 	
-	public weapons(String name, int dmg){
-		this.setName(name);
+	public weapons(int dmg){
 		this.setDmg(dmg);
 	}
 
@@ -21,14 +19,7 @@ public class weapons {
 	}
 
 
-	public String getName() {
-		return name;
-	}
 
-
-	public void setName(String name) {
-		this.name = name;
-	}
 	
 	
 	
