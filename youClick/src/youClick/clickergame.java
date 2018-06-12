@@ -89,7 +89,7 @@ public class clickergame extends JFrame implements ActionListener{
 	
 	public clickergame(){
 		enemy=gl.createenemy();
-		
+		gl.setWeaponUsing(w_schinken); //Schinken as default weapon
 		
 		setLayout(new BorderLayout());
 		

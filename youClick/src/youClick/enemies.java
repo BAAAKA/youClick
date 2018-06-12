@@ -7,20 +7,13 @@ public class enemies {
 	private int HP;
 	private String name;
 	private String race;
-	private int resistanceToSchinken;
-	private int resistanceToBleistift;
-	private int resistanceToBombe;
-	private int resistanceToSchwert;
 	private ImageIcon icon;
 
-	public enemies(int HP, String name, String race, int resistanceToSchinken, int resistanceToBleistift, int resistanceToSchwert, int resistanceToBombe,ImageIcon icon){
+	public enemies(int HP, String name, String race,ImageIcon icon){
 		this.HP=HP;
 		this.name=name;
 		this.race=race;
-		this.resistanceToSchinken=resistanceToSchinken;
-		this.resistanceToBleistift=resistanceToBleistift;
-		this.resistanceToSchwert=resistanceToSchwert;
-		this.resistanceToBombe=resistanceToBombe;
+
 		this.icon=icon;
 
 	}
@@ -33,38 +26,6 @@ public class enemies {
 	}
 	public void descreaseHP(int dmgdone){
 		HP=HP-dmgdone;
-	}
-
-	public int getResistanceToSchinken() {
-		return resistanceToSchinken;
-	}
-
-	public void setResistanceToSchinken(int resistanceToSchinken) {
-		this.resistanceToSchinken = resistanceToSchinken;
-	}
-
-	public int getResistanceToBleistift() {
-		return resistanceToBleistift;
-	}
-
-	public void setResistanceToBleistift(int resistanceToBleistift) {
-		this.resistanceToBleistift = resistanceToBleistift;
-	}
-
-	public int getResistanceToBombe() {
-		return resistanceToBombe;
-	}
-
-	public void setResistanceToBombe(int resistanceToBombe) {
-		this.resistanceToBombe = resistanceToBombe;
-	}
-
-	public int getResistanceToSchwert() {
-		return resistanceToSchwert;
-	}
-
-	public void setResistanceToSchwert(int resistanceToSchwert) {
-		this.resistanceToSchwert = resistanceToSchwert;
 	}
 
 	public String getName() {
