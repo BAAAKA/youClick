@@ -129,9 +129,10 @@ public class clickergame extends JFrame implements ActionListener{
 		BarFrame.add(Bar, BorderLayout.CENTER);
 		Fightbutton.add(LabelForThisButton, BorderLayout.CENTER);
 		
-		Stats.setLayout(new GridLayout(2, 1));
+		Stats.setLayout(new GridLayout(3, 1));
 		Stats.add(LabelEnemysdefeated);
 		Stats.add(LabelTime);
+		Stats.add(LabelKPM);
 		setStats(); //Aktualisierung damit LabelEnemysdefeated den Wert 0 hat
 		
 		weapons.setLayout(new GridLayout(2,2));
@@ -154,11 +155,12 @@ public class clickergame extends JFrame implements ActionListener{
 		
 		//^ Aufbau Frame
 		
-		setLocation(800, 300);
+		setLocation(400, 100);
 		setTitle("youClick");  
-		setSize(940,800);
+		setSize(940,785);
 		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
 	}
 	
 //	public void createenemy(){
@@ -179,7 +181,7 @@ public class clickergame extends JFrame implements ActionListener{
 	public void setStats() { //Updatedate von allen stats welche auf dem GUI angezeigt werden
 		LabelTime.setText("Time passed: " + gl.time() + " Seconds");
 		LabelEnemysdefeated.setText("Enemys defeated: " + Integer.toString(Enemysdefeated));
-		LabelKPM.setText("KPM: " + (anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60); // +0.1 Da man nicht durch "0" rechnen darf
+		LabelKPM.setText("KPM: " + Math.round(((anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
 	}
 	
 //	public String time() {
