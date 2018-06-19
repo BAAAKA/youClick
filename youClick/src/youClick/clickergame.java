@@ -71,7 +71,10 @@ public class clickergame extends JFrame implements ActionListener{
 	private JPanel Stats=new JPanel();
 	private JPanel weapons=new JPanel();
 	
+	
+	private Font statFont = new Font("Verdana", Font.BOLD, 20);
 	private JLabel LabelKPM=new JLabel();
+	
 	private JLabel LabelEnemysdefeated=new JLabel();
 	private JLabel LabelTime=new JLabel();
 	private JLabel LabelForThisButton=new JLabel();
@@ -154,7 +157,10 @@ public class clickergame extends JFrame implements ActionListener{
 		UI.add(weapons);
 		
 		//^ Aufbau Frame
-		
+		LabelTime.setFont(statFont);
+		LabelEnemysdefeated.setFont(statFont);
+		LabelKPM.setFont(statFont);
+
 		setLocation(400, 100);
 		setTitle("youClick");  
 		setSize(940,785);
@@ -179,9 +185,9 @@ public class clickergame extends JFrame implements ActionListener{
 //		return returntext;
 //	}
 	public void setStats() { //Updatedate von allen stats welche auf dem GUI angezeigt werden
-		LabelTime.setText("Time passed: " + gl.time() + " Seconds");
-		LabelEnemysdefeated.setText("Enemys defeated: " + Integer.toString(Enemysdefeated));
-		LabelKPM.setText("KPM: " + Math.round(((anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
+		LabelTime.setText("   Time passed: " + gl.time() + " Seconds");
+		LabelEnemysdefeated.setText("   Enemys defeated: " + Integer.toString(Enemysdefeated));
+		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
 	}
 	
 //	public String time() {
