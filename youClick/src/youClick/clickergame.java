@@ -83,7 +83,8 @@ public class clickergame extends JFrame implements ActionListener{
 
 	
 	private  Font barFont = new Font("Verdana", Font.BOLD, 30);
-	
+	private Color notselectedC=new Color(199, 212, 225);
+	private Color selectedC=new Color(154, 171, 189);
 
 	public static void main(String[] args) {
 
@@ -148,6 +149,10 @@ public class clickergame extends JFrame implements ActionListener{
 		w_schwertButton.addActionListener(this);
 		w_bombeButton.addActionListener(this);
 
+		w_bleistiftButton.setBackground(notselectedC); //Setting Background Color if Buttons used / not used
+		w_schinkenButton.setBackground(notselectedC);
+		w_schwertButton.setBackground(notselectedC);
+		w_bombeButton.setBackground(notselectedC);
 		
 		add(BarFrame, BorderLayout.NORTH);
 		add(Fightbutton, BorderLayout.CENTER);
@@ -229,15 +234,32 @@ public class clickergame extends JFrame implements ActionListener{
 		}
 		if(e.getSource() == this.w_schinkenButton){ //Wechseln der Waffe auf den Schinken
 			gl.setWeaponUsing(w_schinken);
+			w_bleistiftButton.setBackground(notselectedC);
+			w_schinkenButton.setBackground(selectedC);
+			w_schwertButton.setBackground(notselectedC);
+			w_bombeButton.setBackground(notselectedC);
+
 		}
 		if(e.getSource() == this.w_bleistiftButton){ //Wechseln der Waffe auf den Bleistift
 			gl.setWeaponUsing(w_bleistift);
+			w_bleistiftButton.setBackground(selectedC);   
+			w_schinkenButton.setBackground(notselectedC);
+			w_schwertButton.setBackground(notselectedC);
+			w_bombeButton.setBackground(notselectedC);
 		}
 		if(e.getSource() == this.w_bombeButton){ //Wechseln der Waffe auf die Bombe
 			gl.setWeaponUsing(w_bombe);
+			w_bleistiftButton.setBackground(notselectedC);    
+			w_schinkenButton.setBackground(notselectedC);
+			w_schwertButton.setBackground(notselectedC);
+			w_bombeButton.setBackground(selectedC);
 		}
 		if(e.getSource() == this.w_schwertButton){ //Wechseln der Waffe auf das Schwert
 			gl.setWeaponUsing(w_schwert);
+			w_bleistiftButton.setBackground(notselectedC);    
+			w_schinkenButton.setBackground(notselectedC);
+			w_schwertButton.setBackground(selectedC);
+			w_bombeButton.setBackground(notselectedC);
 		}
 	}
 }
