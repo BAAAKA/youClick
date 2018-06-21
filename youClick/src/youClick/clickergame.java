@@ -62,7 +62,7 @@ public class clickergame extends JFrame implements ActionListener{
 	
 
 
-	private gameLogic gl=new gameLogic();
+	private gameLogic gl=new gameLogic(this);
 	
 	
 	private JPanel BarFrame=new JPanel();
@@ -93,6 +93,10 @@ public class clickergame extends JFrame implements ActionListener{
 	
 	public clickergame(){
 		enemy=gl.createenemy();
+		
+		Thread t = new Thread(gl);
+		t.start();		
+		
 		gl.setWeaponUsing(w_schinken); //Schinken as default weapon
 		
 		setLayout(new BorderLayout());
@@ -190,10 +194,17 @@ public class clickergame extends JFrame implements ActionListener{
 //		return returntext;
 //	}
 	public void setStats() { //Updatedate von allen stats welche auf dem GUI angezeigt werden
-		LabelTime.setText("   Time passed: " + gl.time() + " Seconds");
+//		LabelTime.setText("   Time passed: " + gl.time() + " Seconds");
 		LabelEnemysdefeated.setText("   Enemys defeated: " + Integer.toString(Enemysdefeated));
-		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
+//		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
 	}
+	public void setTime(int time) {
+		LabelTime.setText("   Time passed: " + time + " Seconds");
+	}
+	public void setKPM(int time) {
+		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(time+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
+	}
+	
 	
 //	public String time() {
 //		long tEnd = System.currentTimeMillis();
