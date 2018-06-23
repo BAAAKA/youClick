@@ -40,30 +40,27 @@ public class clickergame extends JFrame implements ActionListener{
 	private Waffenverhalten w_schwert=new w_schwert();
 	
 	
-	//Ham button
+	//Ham button picture
 	private String pathtoHam="src/youClick/images/defensive_tools/ham.png";
 	private ImageIcon imageHam= new ImageIcon(pathtoHam);
 	private JButton w_schinkenButton=new JButton(imageHam);
 	
-	//Pencil button
+	//Pencil button picture
 	private String pathtoPencil="src/youClick/images/defensive_tools/pencil.png";
 	private ImageIcon imagePencil= new ImageIcon(pathtoPencil);
 	private JButton w_bleistiftButton=new JButton(imagePencil);
 	
-	//Bomb button
+	//Bomb button picture
 	private String pathtoBomb="src/youClick/images/defensive_tools/bomb.png";
 	private ImageIcon imageBomb= new ImageIcon(pathtoBomb);
 	private JButton w_bombeButton=new JButton(imageBomb);
 	
-	//Sword button
+	//Sword button picture
 	private String pathtoSword="src/youClick/images/defensive_tools/sword.png";
 	private ImageIcon imageSword= new ImageIcon(pathtoSword);
 	private JButton w_schwertButton=new JButton(imageSword);
 	
-
-
 	private gameLogic gl=new gameLogic(this);
-	
 	
 	private JPanel BarFrame=new JPanel();
 	private JPanel Fightbutton=new JPanel();
@@ -72,7 +69,7 @@ public class clickergame extends JFrame implements ActionListener{
 	private JPanel weapons=new JPanel();
 	
 	
-	private Font statFont = new Font("Verdana", Font.BOLD, 20);
+	private Font statFont = new Font("Verdana", Font.PLAIN, 20);
 	private JLabel LabelKPM=new JLabel();
 	
 	private JLabel LabelEnemysdefeated=new JLabel();
@@ -85,6 +82,8 @@ public class clickergame extends JFrame implements ActionListener{
 	private  Font barFont = new Font("Verdana", Font.BOLD, 30);
 	private Color notselectedC=new Color(199, 212, 225);
 	private Color selectedC=new Color(154, 171, 189);
+	private Color statistic=new Color(147, 173, 198);
+
 
 	public static void main(String[] args) {
 
@@ -107,8 +106,6 @@ public class clickergame extends JFrame implements ActionListener{
 		Bar.setValue(enemy.getHP()); //Set Progressbar
 		Bar.setFont(barFont);
 		
-
-
 		
 		ThisButton.addActionListener(this);
 //		ThisButton.setOpaque(true);
@@ -121,8 +118,10 @@ public class clickergame extends JFrame implements ActionListener{
 //		Stats.setOpaque(true);
 //		weapons.setOpaque(true);
 
+		// Hintergrundfarben der GUI-Elemente setzen
 		BarFrame.setBackground(Color.BLUE);
-		Fightbutton.setBackground(Color.GRAY);
+		Fightbutton.setBackground(Color.BLACK);
+		Stats.setBackground(statistic);
 		
 		BarFrame.setLayout(new BorderLayout());
 		Fightbutton.setLayout(new BorderLayout());
@@ -216,7 +215,7 @@ public class clickergame extends JFrame implements ActionListener{
 
 	public void attackButton(){ 
 		anzKlicks++;
-		if(enemy.getHP()>1){ //Falls der Gegner noch HP Ã¼brig hat...
+		if(enemy.getHP()>1){ //Falls der Gegner noch HP Üerig hat...
 			System.out.println(gl.getDmgDone(enemy));
 			progress=enemy.getHP();
 			
@@ -235,8 +234,6 @@ public class clickergame extends JFrame implements ActionListener{
 				LabelForThisButton.setIcon(gl.getIcon()); //Hintergrund auf den neuen Gegner anpassen
 			}
 	}
-	
-	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
