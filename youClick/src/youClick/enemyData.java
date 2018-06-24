@@ -15,7 +15,7 @@ public class enemyData {
 	private ImageIcon imageritter = new ImageIcon(pathtoritter);
 
 	
-public enemies getEnemy(int randomwahl){ //Zufällige auswahl eines neuen Gegners
+public enemies getEnemy(int randomwahl){ //Rückgabe eines Gegners, je nach dem welche Zahl der mitgegebene Parameter beinhaltet
 		enemies enemy=null;
 		System.out.println("Creating new enemy");
 		switch (randomwahl) {

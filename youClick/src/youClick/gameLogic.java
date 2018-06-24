@@ -13,13 +13,6 @@ public class gameLogic implements Runnable{
 	private enemyData eD=new enemyData();
 	private Waffenverhalten waffe;
 	
-	/*weaponUsing
-	 * 1 ist Schinken
-	 * 2 ist bleistift
-	 * 3 ist bombe
-	 * 4 ist schwert
-	 */
-
 	private enemies enemy;
 	static long tStart = System.currentTimeMillis();	//Time at start of programm
 	
@@ -27,50 +20,49 @@ public class gameLogic implements Runnable{
 		this.cg=cg;
 	}
 
-	
-	public int getDmgDone(enemies enemy){
+	//Fügt schaden am Gegner an, welcher per Parameter mitgegeben wird
+	public void getDmgDone(enemies enemy){ 
 		int dmgdone=0;
-		dmgdone=waffe.useweapon(enemy);
-		enemy.descreaseHP(dmgdone);
-		return dmgdone;
+		dmgdone=waffe.useweapon(enemy); //Nutzt momentan ausgerüstete waffe und fügt damit Schaden am Gegner an
+		enemy.descreaseHP(dmgdone); 
+		System.out.println("Dmg done at enemy: " + dmgdone);	
 	}
-	
-	public enemies createenemy(){ //Zuf�llige auswahl eines neuen Gegners
-		int randomwahl=ran.nextInt(4)+1;
-		enemy = eD.getEnemy(randomwahl);
+	//Zufällige auswahl eines neuen Gegners
+	public enemies createenemy(){ 
+		int randomwahl=ran.nextInt(4)+1; //Random Zahl von 1-4
+		enemy = eD.getEnemy(randomwahl); //Je nach Zahl wird einer von 4 verschiedenen Gegnern zurückgegeben
 		return enemy;
 	}
 	
-	public String barvalue() { //Was f�r ein Text in der Healthbar stehen sollte
-		String returntext;
-		
-		returntext=enemy.getName() + " HP: " +Integer.toString(enemy.getHP());
-		
+	//Was für ein Text in der Healthbar stehen sollte
+	public String barvalue() { 
+		String returntext=enemy.getName() + " HP: " +Integer.toString(enemy.getHP());
 		return returntext;
 	}
-	public Icon getIcon() { //Welches der Bilder angezeigt werden sollte
+	//Welches der Bilder als Gegner angezeigt werden sollte
+	public Icon getIcon() { 
 		return enemy.getIcon();
 	}
 	
 	
-	
-	public int time() { //Die Zeit welche vergangen ist seit anfang des Programms
-		long tEnd = System.currentTimeMillis();
-		long tDelta = tEnd - tStart;
+	//Gibt zurück wie viel Zeit seit dem Start vergangen ist
+	public int time() { 
+		long tEnd = System.currentTimeMillis(); //Momentane Zeit
+		long tDelta = tEnd - tStart; //Wie viel Zeit vergangen ist
 		long time = tDelta/1000;
-//		String stringtime = String.valueOf(time);
-		int timepassed = (int) time;
+		int timepassed = (int) time; //Von long zu int ¯\_(ツ)_/¯
 		return timepassed;
 	}
 	
-
-	public void setWeaponUsing(Waffenverhalten waffe) {
+	//Setzt Waffe, welche als Parameter mitgegeben wurde
+	public void setWeaponUsing(Waffenverhalten waffe) { 
 		System.out.println("SettingWeapon");
 		this.waffe = waffe;
 	}
-
+	
+	//Der zweite Thread, welche eine unendliche Schlaufe ist, welche jede 0.1 Sekunde die vergangene Zeit, sowie die KPM auf dem GUI anpasst.
 	@Override
-	public void run() {
+	public void run() { 
 		while (true) {
 		    try {
 				Thread.sleep(100);

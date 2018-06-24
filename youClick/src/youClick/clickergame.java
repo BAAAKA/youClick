@@ -24,7 +24,6 @@ public class clickergame extends JFrame implements ActionListener{
 
 	private JProgressBar Bar;
 	private JButton ThisButton = new JButton();
-	private int progress = 100;
 	private int anzahlschritte=100;
 	private int anzKlicks=0;
 	
@@ -60,7 +59,6 @@ public class clickergame extends JFrame implements ActionListener{
 	//////////////////////////////
 	private String pathtotitlebaricon="src/youClick/images/mouse_titlebar.png";
 	private ImageIcon imagetitlebar= new ImageIcon(pathtotitlebaricon);
-	UI.setIconImage(imagetitlebar);
 	/////////////////////////////////
 	
 	private gameLogic gl=new gameLogic(this);
@@ -96,10 +94,10 @@ public class clickergame extends JFrame implements ActionListener{
 	public clickergame(){
 		enemy=gl.createenemy();
 		
-		Thread t = new Thread(gl);
-		t.start();		
+		Thread t = new Thread(gl); //Neuer Thread, welche man später für den Timer benötigt
+		t.start();	//Der Thread wird bereit gemacht	
 		
-		gl.setWeaponUsing(w_schinken); //Schinken as default weapon
+		gl.setWeaponUsing(w_schinken); //Schinken als standard weapon
 		
 		setLayout(new BorderLayout());
 		
@@ -111,15 +109,8 @@ public class clickergame extends JFrame implements ActionListener{
 		
 		
 		ThisButton.addActionListener(this);
-//		ThisButton.setOpaque(true);
-		ThisButton.setContentAreaFilled(false); //Button mostly transparent. So you can see the image of the "JLabelforThisButton"
-//		ThisButton.setBorderPainted(false);
-		
-//		BarFrame.setOpaque(true); 
-//		Fightbutton.setOpaque(true);
-//		UI.setOpaque(true);
-//		Stats.setOpaque(true);
-//		weapons.setOpaque(true);
+
+		ThisButton.setContentAreaFilled(false); //Button mostly transparent. So you can see the image of the "LabelForThisButton"
 
 		// Hintergrundfarben der GUI-Elemente setzen
 		BarFrame.setBackground(Color.BLUE);
@@ -143,7 +134,7 @@ public class clickergame extends JFrame implements ActionListener{
 		Stats.add(LabelEnemysdefeated);
 		Stats.add(LabelTime);
 		Stats.add(LabelKPM);
-		setStats(); //Aktualisierung damit LabelEnemysdefeated den Wert 0 hat
+		LabelEnemysdefeated.setText("   Enemys defeated: " + Integer.toString(Enemysdefeated)); 	//Update von Enemysdefeated stat welche auf dem GUI angezeigt wird
 		
 		weapons.setLayout(new GridLayout(2,2));
 		weapons.add(w_bleistiftButton);
@@ -171,6 +162,8 @@ public class clickergame extends JFrame implements ActionListener{
 		LabelTime.setFont(statFont);
 		LabelEnemysdefeated.setFont(statFont);
 		LabelKPM.setFont(statFont);
+		
+		setIconImage(imagetitlebar.getImage()); //Setzten des Icons des Fensters
 
 		setLocation(400, 100);
 		setTitle("youClick");  
@@ -180,58 +173,28 @@ public class clickergame extends JFrame implements ActionListener{
 		setResizable(false);
 	}
 	
-//	public void createenemy(){
-//		System.out.println("Creating new enemy");
-//		progress = enemy.getHP();
-//		Bar.setString(barvalue());
-//		System.out.println("Enemy HP " + progress);
-//	}
-	
-//	public String barvalue() {
-//		String returntext;
-//		
-//		returntext="HP: " +Integer.toString(progress);
-//		
-//		Bar.setValue(progress); //Set Progressbar
-//		return returntext;
-//	}
-	public void setStats() { //Updatedate von allen stats welche auf dem GUI angezeigt werden
-//		LabelTime.setText("   Time passed: " + gl.time() + " Seconds");
-		LabelEnemysdefeated.setText("   Enemys defeated: " + Integer.toString(Enemysdefeated));
-//		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(Integer.parseInt(gl.time())+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
-	}
+
+	//Setzt die Zeit Anzeige auf dem Gui, wird von GameLogic aufgerufen
 	public void setTime(int time) {
 		LabelTime.setText("   Time passed: " + time + " Seconds");
 	}
+	//Setzt die KPM Anzeige auf dem Gui, wird von GameLogic aufgerufen
 	public void setKPM(int time) {
 		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(time+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
 	}
 	
-	
-//	public String time() {
-//		long tEnd = System.currentTimeMillis();
-//		long tDelta = tEnd - tStart;
-//		long time = tDelta/1000;
-//		String stringtime = String.valueOf(time);
-//		return stringtime;
-//	}
-
+	//Wird ausgeführt wenn auf den Enemy geklickt wird
 	public void attackButton(){ 
-		anzKlicks++;
+		anzKlicks++; //Zähler für wie oft man auf den Enemy geklickt hat geht um 1 hoch
 		if(enemy.getHP()>1){ //Falls der Gegner noch HP Üerig hat...
-			System.out.println(gl.getDmgDone(enemy));
-			progress=enemy.getHP();
-			
-			Bar.setString(gl.barvalue());
-			Bar.setValue(enemy.getHP()); //Set Progressbar
-
-			System.out.println("progress "+progress);
-			setStats();
-
+			gl.getDmgDone(enemy);
+			Bar.setString(gl.barvalue()); //Setzt den Text in der HP Bar
+			Bar.setValue(enemy.getHP()); //Setzt den Blauen Bereich in der HP Bar
+			LabelEnemysdefeated.setText("   Enemys defeated: " + Integer.toString(Enemysdefeated)); 	//Update von Enemysdefeated stat welche auf dem GUI angezeigt wird
 			}
-			else { //Falls der Gegner kein HP mehr Ã¼brig hat
+			else { //Falls der Gegner kein HP mehr uebrig hat
 				enemy=gl.createenemy(); //Neuer Gegner erstellen
-				Enemysdefeated++;
+				Enemysdefeated++; 
 				Bar.setString(gl.barvalue());
 				Bar.setValue(enemy.getHP()); //Set Progressbar
 				LabelForThisButton.setIcon(gl.getIcon()); //Hintergrund auf den neuen Gegner anpassen
