@@ -19,8 +19,6 @@ public class gameLogic implements Runnable{
 	 * 3 ist bombe
 	 * 4 ist schwert
 	 */
-	
-
 
 	private enemies enemy;
 	static long tStart = System.currentTimeMillis();	//Time at start of programm
@@ -65,9 +63,6 @@ public class gameLogic implements Runnable{
 		return timepassed;
 	}
 	
-
-
-
 
 	public void setWeaponUsing(Waffenverhalten waffe) {
 		System.out.println("SettingWeapon");

@@ -20,8 +20,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-//Pull, Commit, Push
-
 public class clickergame extends JFrame implements ActionListener{
 
 	private JProgressBar Bar;
@@ -38,7 +36,6 @@ public class clickergame extends JFrame implements ActionListener{
 	private Waffenverhalten w_bombe=new w_bombe();
 	private Waffenverhalten w_bleistift=new w_bleistift();
 	private Waffenverhalten w_schwert=new w_schwert();
-	
 	
 	//Ham button picture
 	private String pathtoHam="src/youClick/images/defensive_tools/ham.png";
@@ -59,6 +56,12 @@ public class clickergame extends JFrame implements ActionListener{
 	private String pathtoSword="src/youClick/images/defensive_tools/sword.png";
 	private ImageIcon imageSword= new ImageIcon(pathtoSword);
 	private JButton w_schwertButton=new JButton(imageSword);
+	
+	//////////////////////////////
+	private String pathtotitlebaricon="src/youClick/images/mouse_titlebar.png";
+	private ImageIcon imagetitlebar= new ImageIcon(pathtotitlebaricon);
+	UI.setIconImage(imagetitlebar);
+	/////////////////////////////////
 	
 	private gameLogic gl=new gameLogic(this);
 	
