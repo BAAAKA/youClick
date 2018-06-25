@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="youClick.e_bakterie" project="youClick" 
     file="/youClick/src/youClick/e_bakterie.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="208" x="469" y="1178"/>    
+    <position height="81" width="208" x="704" y="1626"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="youClick.w_schinken" project="youClick" 
     file="/youClick/src/youClick/w_schinken.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="146" x="-114" y="558"/>    
+    <position height="99" width="146" x="70" y="988"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="youClick.w_bleistift" project="youClick" 
     file="/youClick/src/youClick/w_bleistift.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="146" x="72" y="558"/>    
+    <position height="99" width="146" x="256" y="988"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="youClick.w_schwert" project="youClick" 
     file="/youClick/src/youClick/w_schwert.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="146" x="258" y="558"/>    
+    <position height="99" width="146" x="442" y="988"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="youClick.e_lehrer" project="youClick" file="/youClick/src/youClick/e_lehrer.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="198" x="717" y="1178"/>    
+    <position height="81" width="198" x="952" y="1626"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="youClick.enemyData" project="youClick" 
     file="/youClick/src/youClick/enemyData.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="148" x="581" y="823"/>    
+    <position height="243" width="148" x="1002" y="1271"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </class>  
   <interface id="7" language="java" name="youClick.Waffenverhalten" project="youClick" 
     file="/youClick/src/youClick/Waffenverhalten.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="146" x="769" y="823"/>    
+    <position height="81" width="146" x="816" y="1271"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </interface>  
   <class id="8" language="java" name="youClick.enemies" project="youClick" file="/youClick/src/youClick/enemies.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="315" width="198" x="955" y="823"/>    
+    <position height="315" width="198" x="1190" y="1271"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="youClick.e_ritter" project="youClick" file="/youClick/src/youClick/e_ritter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="192" x="955" y="1178"/>    
+    <position height="81" width="192" x="1190" y="1626"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="youClick.w_bombe" project="youClick" file="/youClick/src/youClick/w_bombe.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="146" x="444" y="558"/>    
+    <position height="99" width="146" x="628" y="988"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="youClick.gameLogic" project="youClick" 
     file="/youClick/src/youClick/gameLogic.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="220" x="630" y="558"/>    
+    <position height="243" width="220" x="898" y="988"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="youClick.test" project="youClick" file="/youClick/src/youClick/test.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="113" x="516" y="-139"/>    
+    <position height="99" width="113" x="387" y="183"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="youClick.clickergame" project="youClick" 
     file="/youClick/src/youClick/clickergame.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="657" width="194" x="913" y="-139"/>    
+    <position height="765" width="194" x="858" y="183"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -120,118 +120,170 @@
   </class>  
   <class id="14" language="java" name="youClick.e_drache" project="youClick" file="/youClick/src/youClick/e_drache.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="204" x="1187" y="1178"/>    
+    <position height="81" width="204" x="1422" y="1626"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="15">    
+  <class id="15" language="java" name="youClick.gameLogicTest" project="youClick" 
+    file="/youClick/src/youClick/gameLogicTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="158" x="1181" y="183"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="16">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="16" name="waffe"/>      
-      <multiplicity id="17" minimum="0" maximum="1"/>    
+      <attribute id="17" name="cg"/>      
+      <multiplicity id="18" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="19">    
+    <bendpoint x="1190" y="988"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="20" name="w_bleistift"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="18">    
-    <bendpoint x="880" y="558"/>    
+  <association id="22">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="19" name="w_schinken"/>      
-      <multiplicity id="20" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="21">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <realization id="22">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <generalization id="23">    
-    <end type="SOURCE" refId="14"/>    
-    <end type="TARGET" refId="8"/>  
-  </generalization>  
-  <association id="24">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="25" name="gl"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
+      <attribute id="23" name="gl"/>      
+      <multiplicity id="24" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="27">    
-    <bendpoint x="901" y="558"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="28" name="w_bombe"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
+  <association id="25">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="26" name="gl"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <bendpoint x="1169" y="988"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="29" name="w_schwert"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="30">    
+  <association id="31">    
+    <bendpoint x="825" y="988"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="32" name="w_bleistift"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="34">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <generalization id="35">    
     <end type="SOURCE" refId="9"/>    
     <end type="TARGET" refId="8"/>  
   </generalization>  
-  <realization id="31">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="7"/>  
-  </realization>  
-  <generalization id="32">    
+  <generalization id="36">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <association id="37">    
+    <bendpoint x="846" y="988"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="38" name="w_schinken"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="40">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="8"/>  
   </generalization>  
-  <association id="33">    
-    <bendpoint x="922" y="558"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="34" name="w_bleistift"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="36">    
+  <realization id="41">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="7"/>  
   </realization>  
-  <association id="37">    
-    <bendpoint x="964" y="558"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="38" name="enemy"/>      
-      <multiplicity id="39" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="40">    
-    <end type="SOURCE" refId="10"/>    
+  <realization id="42">    
+    <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="7"/>  
   </realization>  
-  <association id="41">    
-    <bendpoint x="943" y="558"/>    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="42" name="w_schwert"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+  <association id="43">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="44" name="waffe"/>      
+      <multiplicity id="45" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="44">    
-    <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="45" name="enemy"/>      
-      <multiplicity id="46" minimum="0" maximum="1"/>    
+  <realization id="46">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="47">    
+    <bendpoint x="867" y="988"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="48" name="w_bombe"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="50">    
+    <bendpoint x="1211" y="988"/>    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="51" name="enemy"/>      
+      <multiplicity id="52" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="47">    
+  <association id="53">    
+    <bendpoint x="1148" y="988"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="54" name="enemy"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="56">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="57">    
+    <bendpoint x="804" y="988"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="58" name="w_schwert"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="60">    
     <end type="SOURCE" refId="11" navigable="false">      
-      <attribute id="48" name="eD"/>      
-      <multiplicity id="49" minimum="0" maximum="1"/>    
+      <attribute id="61" name="enemy"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="64" name="eD"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
