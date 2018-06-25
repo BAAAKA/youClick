@@ -4,17 +4,18 @@ import javax.swing.ImageIcon;
 
 public class enemies {
 	
-	private int HP;
+	private int HP; //this.HP
 	private String name;
 	private String race;
 	private ImageIcon icon;
 
 	public enemies(int HP, String name, String race,ImageIcon icon){
-		this.HP=HP;
+		this.HP=HP; //HP
 		this.name=name;
 		this.race=race;
 
 		this.icon=icon;
+		// Alle Methoden und Variablen sind in der Oberklasse weil es dadurch simpler ist. Und sowieso nur getter und setter in dieser Klasse existieren.
 
 	}
 

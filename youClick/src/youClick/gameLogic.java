@@ -20,14 +20,14 @@ public class gameLogic implements Runnable{
 		this.cg=cg;
 	}
 
-	//Fügt schaden am Gegner an, welcher per Parameter mitgegeben wird
-	public void getDmgDone(enemies enemy){ 
+	//Fügt Schaden am Gegner an, welcher per Parameter mitgegeben wird
+	public void getDmgDone(enemies enemy){ //Welcher Enemy angegriffen wird
 		int dmgdone=0;
 		dmgdone=waffe.useweapon(enemy); //Nutzt momentan ausgerüstete waffe und fügt damit Schaden am Gegner an
-		enemy.descreaseHP(dmgdone); 
+		enemy.descreaseHP(dmgdone); //Wie viel abgezogen wird
 		System.out.println("Dmg done at enemy: " + dmgdone);	
 	}
-	//Zufällige auswahl eines neuen Gegners
+	//Zufällige Auswahl eines neuen Gegners
 	public enemies createenemy(){ 
 		int randomwahl=ran.nextInt(4)+1; //Random Zahl von 1-4
 		enemy = eD.getEnemy(randomwahl); //Je nach Zahl wird einer von 4 verschiedenen Gegnern zurückgegeben
@@ -71,10 +71,5 @@ public class gameLogic implements Runnable{
 		    cg.setKPM(time());
 		}
 		
-	}
-
-
-	
-
-	
+	}	
 }

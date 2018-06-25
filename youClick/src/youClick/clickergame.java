@@ -56,10 +56,9 @@ public class clickergame extends JFrame implements ActionListener{
 	private ImageIcon imageSword= new ImageIcon(pathtoSword);
 	private JButton w_schwertButton=new JButton(imageSword);
 	
-	//////////////////////////////
+	//
 	private String pathtotitlebaricon="src/youClick/images/mouse_titlebar.png";
 	private ImageIcon imagetitlebar= new ImageIcon(pathtotitlebaricon);
-	/////////////////////////////////
 	
 	private gameLogic gl=new gameLogic(this);
 	
@@ -178,7 +177,7 @@ public class clickergame extends JFrame implements ActionListener{
 	public void setTime(int time) {
 		LabelTime.setText("   Time passed: " + time + " Seconds");
 	}
-	//Setzt die KPM Anzeige auf dem Gui, wird von GameLogic aufgerufen
+	//Setzt die KPM Anzeige auf dem Gui, wird von GameLogic aufgerufen (errechnet die KPM anhande der Zeit)
 	public void setKPM(int time) {
 		LabelKPM.setText("   KPM: " + Math.round(((anzKlicks/(time+ 0.1))*60) * 100.0) / 100.0); // +0.1 Da man nicht durch "0" rechnen darf
 	}
@@ -186,28 +185,28 @@ public class clickergame extends JFrame implements ActionListener{
 	//Wird ausgeführt wenn auf den Enemy geklickt wird
 	public void attackButton(){ 
 		anzKlicks++; //Zähler für wie oft man auf den Enemy geklickt hat geht um 1 hoch
-		if(enemy.getHP()>1){ //Falls der Gegner noch HP Üerig hat...
-			gl.getDmgDone(enemy);
+		if(enemy.getHP()>0){ //Falls der Gegner noch HP Üerig hat...
+			gl.getDmgDone(enemy); //Macht den Schaden
 			Bar.setString(gl.barvalue()); //Setzt den Text in der HP Bar
 			Bar.setValue(enemy.getHP()); //Setzt den Blauen Bereich in der HP Bar
 			LabelEnemysdefeated.setText("   Enemys defeated: " + Integer.toString(Enemysdefeated)); 	//Update von Enemysdefeated stat welche auf dem GUI angezeigt wird
 			}
 			else { //Falls der Gegner kein HP mehr uebrig hat
 				enemy=gl.createenemy(); //Neuer Gegner erstellen
-				Enemysdefeated++; 
-				Bar.setString(gl.barvalue());
-				Bar.setValue(enemy.getHP()); //Set Progressbar
-				LabelForThisButton.setIcon(gl.getIcon()); //Hintergrund auf den neuen Gegner anpassen
+				Enemysdefeated++; // Erhöht die (Statistik) Variable um 1 
+				Bar.setString(gl.barvalue()); //Text
+				Bar.setValue(enemy.getHP()); //Set Progressbar (blau)
+				LabelForThisButton.setIcon(gl.getIcon()); //Setzt das Gegner Bild
 			}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == this.ThisButton){
-			attackButton();			
+			attackButton();	// Wenn auf den Gegner geklickt wird so wird die Methode attackButton aufgerufen.		
 		}
 		if(e.getSource() == this.w_schinkenButton){ //Wechseln der Waffe auf den Schinken
-			gl.setWeaponUsing(w_schinken);
+			gl.setWeaponUsing(w_schinken); // Setzt die Waffe in der GameLogic
 			w_bleistiftButton.setBackground(notselectedC);
 			w_schinkenButton.setBackground(selectedC);
 			w_schwertButton.setBackground(notselectedC);
