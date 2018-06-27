@@ -14,7 +14,7 @@ public class gameLogicTesting extends TestCase {
 
 	int value1;
 	int value2;
-	gameLogic gl=new gameLogic(null);
+	gameLogic gl=new gameLogic();
 	private Waffenverhalten w_schwert=new w_schwert();
 	private Waffenverhalten w_bleistift=new w_bleistift();
 
