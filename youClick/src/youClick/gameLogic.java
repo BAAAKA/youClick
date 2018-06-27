@@ -1,11 +1,12 @@
 package youClick;
 
+import java.util.Observable;
 import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-public class gameLogic implements Runnable{
+public class gameLogic extends Observable implements Runnable{
 	
 	private Random ran=new Random();
 	private clickergame cg;
@@ -67,8 +68,8 @@ public class gameLogic implements Runnable{
 		    try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {}	
-		    cg.setTime(time());
-		    cg.setKPM(time());
+			this.setChanged();
+			this.notifyObservers(this.time());
 		}
 		
 	}	

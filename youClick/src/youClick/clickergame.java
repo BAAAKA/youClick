@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
@@ -20,7 +22,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
-public class clickergame extends JFrame implements ActionListener{
+public class clickergame extends JFrame implements ActionListener, Observer{
 
 	private JProgressBar Bar;
 	private JButton ThisButton = new JButton();
@@ -93,11 +95,10 @@ public class clickergame extends JFrame implements ActionListener{
 	public clickergame(){
 		enemy=gl.createenemy();
 		
+		gl.addObserver(this);
 		Thread t = new Thread(gl); //Neuer Thread, welche man später für den Timer benötigt
 		t.start();	//Der Thread wird bereit gemacht	
-		
-		gl.setWeaponUsing(w_schinken); //Schinken als standard weapon
-		
+
 		setLayout(new BorderLayout());
 		
 		Bar = new JProgressBar(0, anzahlschritte);
@@ -176,6 +177,7 @@ public class clickergame extends JFrame implements ActionListener{
 	//Setzt die Zeit Anzeige auf dem Gui, wird von GameLogic aufgerufen
 	public void setTime(int time) {
 		LabelTime.setText("   Time passed: " + time + " Seconds");
+		setKPM(time);
 	}
 	//Setzt die KPM Anzeige auf dem Gui, wird von GameLogic aufgerufen (errechnet die KPM anhande der Zeit)
 	public void setKPM(int time) {
@@ -234,5 +236,10 @@ public class clickergame extends JFrame implements ActionListener{
 			w_schwertButton.setBackground(selectedC);
 			w_bombeButton.setBackground(notselectedC);
 		}
+	}
+
+	@Override
+	public void update(Observable arg0, Object arg1) {		
+	    setTime((int) arg1);
 	}
 }
