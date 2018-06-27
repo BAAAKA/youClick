@@ -1,14 +1,17 @@
 package youClick;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import javax.swing.ImageIcon;
 
 import org.junit.jupiter.api.Test;
 
 import junit.framework.TestCase;
 
-public class gameLogicTest extends TestCase{
+public class gameLogicTesting extends TestCase {
+
+	protected void setUp() throws Exception {
+		super.setUp();
+	}
+
 	int value1;
 	int value2;
 	gameLogic gl=new gameLogic(null);
@@ -22,13 +25,13 @@ public class gameLogicTest extends TestCase{
 
 
 	@Test
-	void testCreateenemy() {
+	public void testCreateenemy() {
 		enemy=null;
 		enemy=gl.createenemy();
 		assertTrue(enemy!=null);
 	}
 	@Test
-	void testSetWeaponUsing() {
+	public void testSetWeaponUsing() {
 		String pathtolehrer="src/youClick/images/lehrer.jpg";
 		ImageIcon imagelehrer= new ImageIcon(pathtolehrer);
 		gl.setWeaponUsing(w_bleistift); 		
@@ -68,7 +71,7 @@ public class gameLogicTest extends TestCase{
 	}
 
 	@Test
-	void testTime() {
+	public void testTime() {
 		int starttime=gl.time();
 		System.out.println("starttime: " + starttime);
 	    try {Thread.sleep(1000);} catch (InterruptedException e) {} //sleep for 1000
@@ -76,8 +79,6 @@ public class gameLogicTest extends TestCase{
 		System.out.println("nowtime: " + nowtime);
 		assertTrue(starttime<nowtime);
 	}
-
-
 
 
 }
