@@ -62,7 +62,7 @@ public class clickergame extends JFrame implements ActionListener, Observer{
 	private String pathtotitlebaricon="src/youClick/images/mouse_titlebar.png";
 	private ImageIcon imagetitlebar= new ImageIcon(pathtotitlebaricon);
 	
-	private gameLogic gl=new gameLogic(this);
+	private gameLogic gl=new gameLogic();
 	
 	private JPanel BarFrame=new JPanel();
 	private JPanel Fightbutton=new JPanel();

@@ -9,7 +9,6 @@ import javax.swing.ImageIcon;
 public class gameLogic extends Observable implements Runnable{
 	
 	private Random ran=new Random();
-	private clickergame cg;
 	
 	private enemyData eD=new enemyData();
 	private Waffenverhalten waffe;
@@ -17,8 +16,7 @@ public class gameLogic extends Observable implements Runnable{
 	private enemies enemy;
 	static long tStart = System.currentTimeMillis();	//Time at start of programm
 	
-	public gameLogic(clickergame cg) {
-		this.cg=cg;
+	public gameLogic() {
 	}
 
 	//Fügt Schaden am Gegner an, welcher per Parameter mitgegeben wird
