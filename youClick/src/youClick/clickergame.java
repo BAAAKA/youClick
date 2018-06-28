@@ -94,7 +94,8 @@ public class clickergame extends JFrame implements ActionListener, Observer{
 	
 	public clickergame(){
 		enemy=gl.createenemy();
-		
+		gl.setWeaponUsing(w_schinken); // Schinken als Standardwaffe
+
 		gl.addObserver(this);
 		Thread t = new Thread(gl); //Neuer Thread, welche man später für den Timer benötigt
 		t.start();	//Der Thread wird bereit gemacht	
