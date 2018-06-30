@@ -25,12 +25,18 @@ public class gameLogicTesting extends TestCase {
 
 
 	@Test
+	/*
+	 * Test ob beim erstellen eines enemies kein Problem auftritt.
+	 */
 	public void testCreateenemy() {
 		enemy=null;
 		enemy=gl.createenemy();
 		assertTrue(enemy!=null);
 	}
 	@Test
+	/*
+	 * Testet ob man die Waffe wechseln kann. Dazu wird die Waffe gewechselt und geschaut ob man dann den korrekten Schaden am Gegner zufügt.
+	 */
 	public void testSetWeaponUsing() {
 		String pathtolehrer="src/youClick/images/lehrer.jpg";
 		ImageIcon imagelehrer= new ImageIcon(pathtolehrer);
@@ -43,6 +49,9 @@ public class gameLogicTesting extends TestCase {
 
 	}
 	@Test
+	/*
+	 * Testet ob man mit dem Schwert den korrekten Schaden am Gegner zufügt.
+	 */
 	public void testGetDmgDone() {
 		int enemyStartHp=enemy.getHP();
 		String enemyrace=enemy.getRace();
@@ -63,6 +72,9 @@ public class gameLogicTesting extends TestCase {
 		}
 	}
 	@Test
+	/*
+	 * Testet ob der Text4 in der Bar auf korrekte Art zusammengebaut wird.
+	 */
 	public void testBarvalue() {
 		enemy.setHP(40);
 		enemy.setName("theName");
@@ -71,6 +83,9 @@ public class gameLogicTesting extends TestCase {
 	}
 
 	@Test
+	/*
+	 * Testet ob Zeit beim Timer vergeht.
+	 */
 	public void testTime() {
 		int starttime=gl.time();
 		System.out.println("starttime: " + starttime);
